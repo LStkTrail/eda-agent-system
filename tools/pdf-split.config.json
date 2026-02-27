@@ -1,0 +1,413 @@
+{
+    "inputPath": "./doc/innovus.pdf",
+    "outputDir": "./.output",
+    "ranges": [
+        {
+            "startPage": 71,
+            "endPage": 85,
+            "name": "01-Bus-Plan-Commands",
+            "subCommands": [
+                {
+                    "startPage": 71,
+                    "endPage": 73,
+                    "name": "01-01-createBusGuide"
+                },
+                {
+                    "startPage": 74,
+                    "endPage": 75,
+                    "name": "01-02-deleteBusGuide"
+                },
+                {
+                    "startPage": 76,
+                    "endPage": 77,
+                    "name": "01-03-deselectBusGuide"
+                },
+                {
+                    "startPage": 78,
+                    "endPage": 78,
+                    "name": "01-04-resetBusGuideMultiColors"
+                },
+                {
+                    "startPage": 79,
+                    "endPage": 80,
+                    "name": "01-05-selectBusGuide"
+                },
+                {
+                    "startPage": 81,
+                    "endPage": 81,
+                    "name": "01-06-selectBusGuideSegment"
+                },
+                {
+                    "startPage": 82,
+                    "endPage": 82,
+                    "name": "01-07-setBusGuideMultiColors"
+                },
+                {
+                    "startPage": 83,
+                    "endPage": 85,
+                    "name": "01-08-update_bus_guide"
+                }
+            ]
+        },
+        {
+            "startPage": 86,
+            "endPage": 278,
+            "name": "02-Clock-Tree-Synthesis-Commands",
+            "subCommands": []
+        },
+        {
+            "startPage": 279,
+            "endPage": 284,
+            "name": "03-Conformal-Commands",
+            "subCommands": [
+                {
+                    "startPage": 279,
+                    "endPage": 280,
+                    "name": "03-01-runCLP"
+                },
+                {
+                    "startPage": 281,
+                    "endPage": 284,
+                    "name": "03-02-runLEC"
+                }
+            ]
+        },
+        {
+            "startPage": 285,
+            "endPage": 329,
+            "name": "04-Delay-Calculation-Commands-and-Global-Variables",
+            "subCommands": [
+                {
+                    "startPage": 286,
+                    "endPage": 289,
+                    "name": "04-01-addDeCap"
+                },
+                {
+                    "startPage": 290,
+                    "endPage": 290,
+                    "name": "04-02-addDeCapCellCandidates"
+                },
+                {
+                    "startPage": 291,
+                    "endPage": 291,
+                    "name": "04-03-cleanupExcludeNet"
+                },
+                {
+                    "startPage": 292,
+                    "endPage": 292,
+                    "name": "04-04-clearDeCapCellCandidates"
+                },
+                {
+                    "startPage": 293,
+                    "endPage": 293,
+                    "name": "04-05-deleteDeCap"
+                },
+                {
+                    "startPage": 294,
+                    "endPage": 295,
+                    "name": "04-06-getDelayCalMode"
+                },
+                {
+                    "startPage": 296,
+                    "endPage": 296,
+                    "name": "04-07-reportDeCap"
+                },
+                {
+                    "startPage": 297,
+                    "endPage": 298,
+                    "name": "04-08-reportDeCapCellCandidates"
+                },
+                {
+                    "startPage": 299,
+                    "endPage": 302,
+                    "name": "04-09-reportDelayCalculation"
+                },
+                {
+                    "startPage": 303,
+                    "endPage": 303,
+                    "name": "04-10-saveExcludeNet"
+                },
+                {
+                    "startPage": 304,
+                    "endPage": 304,
+                    "name": "04-11-saveSignalStormConstraint"
+                },
+                {
+                    "startPage": 305,
+                    "endPage": 314,
+                    "name": "04-12-setDelayCalMode"
+                },
+                {
+                    "startPage": 315,
+                    "endPage": 315,
+                    "name": "04-13-setWireDelayFactor"
+                },
+                {
+                    "startPage": 316,
+                    "endPage": 316,
+                    "name": "04-14-translateSNDCSetupFile"
+                },
+                {
+                    "startPage": 317,
+                    "endPage": 318,
+                    "name": "04-15-writeSetLoad"
+                },
+                {
+                    "startPage": 319,
+                    "endPage": 320,
+                    "name": "04-16-delaycal_default_net_delay"
+                },
+                {
+                    "startPage": 321,
+                    "endPage": 321,
+                    "name": "04-17-delaycal_default_net_load"
+                },
+                {
+                    "startPage": 322,
+                    "endPage": 323,
+                    "name": "04-18-delaycal_input_transition_delay"
+                },
+                {
+                    "startPage": 324,
+                    "endPage": 324,
+                    "name": "04-19-delaycal_rd_rnet_fraction_threshold"
+                },
+                {
+                    "startPage": 325,
+                    "endPage": 325,
+                    "name": "04-20-delaycal_support_min_max_pin_cap"
+                },
+                {
+                    "startPage": 326,
+                    "endPage": 326,
+                    "name": "04-21-delaycal_support_rise_fall_pin_cap"
+                },
+                {
+                    "startPage": 327,
+                    "endPage": 327,
+                    "name": "04-22-delaycal_support_wire_load_model"
+                },
+                {
+                    "startPage": 328,
+                    "endPage": 329,
+                    "name": "04-23-delaycal_use_default_delay_limit"
+                }
+            ]
+        },
+        {
+            "startPage": 330,
+            "endPage": 345,
+            "name": "05-ART-Based-Flow-Commands"
+        },
+        {
+            "startPage": 346,
+            "endPage": 517,
+            "name": "06-Flip-Chip-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 518,
+            "endPage": 820,
+            "name": "07-Floorplan-Commands"
+        },
+        {
+            "startPage": 821,
+            "endPage": 990,
+            "name": "08-General-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 991,
+            "endPage": 1125,
+            "name": "09-GUI-Commands"
+        },
+        {
+            "startPage": 1126,
+            "endPage": 1129,
+            "name": "10-Hierarchical-Design-Commands"
+        },
+        {
+            "startPage": 1130,
+            "endPage": 1162,
+            "name": "11-ILM-and-FlexILM-Commands"
+        },
+        {
+            "startPage": 1163,
+            "endPage": 1395,
+            "name": "12-Import-and-Export-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 1396,
+            "endPage": 1480,
+            "name": "13-Interactive-ECO-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 1482,
+            "endPage": 1604,
+            "name": "14-Low-Power-Commands"
+        },
+        {
+            "startPage": 1605,
+            "endPage": 1673,
+            "name": "15-Metal-and-Via-Fill-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 1674,
+            "endPage": 1697,
+            "name": "16-Mixed-Signal-Commands"
+        },
+        {
+            "startPage": 1698,
+            "endPage": 1723,
+            "name": "17-Multiple-CPU-Processing-Commands"
+        },
+        {
+            "startPage": 1724,
+            "endPage": 1776,
+            "name": "18-OpenAccess-Commands"
+        },
+        {
+            "startPage": 1777,
+            "endPage": 2018,
+            "name": "19-Partition-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 2019,
+            "endPage": 2203,
+            "name": "20-Placement-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 2204,
+            "endPage": 2209,
+            "name": "21-Power-Analysis-Commands"
+        },
+        {
+            "startPage": 2211,
+            "endPage": 2357,
+            "name": "22-Power-Calculations-Commands"
+        },
+        {
+            "startPage": 2359,
+            "endPage": 2411,
+            "name": "23-Power-Grid-Library-Commands"
+        },
+        {
+            "startPage": 2413,
+            "endPage": 2484,
+            "name": "24-Power-Planning-Commands"
+        },
+        {
+            "startPage": 2485,
+            "endPage": 2513,
+            "name": "25-Power-Route-Commands"
+        },
+        {
+            "startPage": 2514,
+            "endPage": 2579,
+            "name": "26-Prototyping-Commands"
+        },
+        {
+            "startPage": 2580,
+            "endPage": 2772,
+            "name": "27-Rail-Analysis-Commands"
+        },
+        {
+            "startPage": 2773,
+            "endPage": 2833,
+            "name": "28-RC-Extraction-Commands-and-Global-Variable"
+        },
+        {
+            "startPage": 2834,
+            "endPage": 2974,
+            "name": "29-Route-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 2976,
+            "endPage": 3043,
+            "name": "30-Signal-Integrity-Commands"
+        },
+        {
+            "startPage": 3045,
+            "endPage": 3498,
+            "name": "31-Timing-Analysis-Commands"
+        },
+        {
+            "startPage": 3499,
+            "endPage": 3549,
+            "name": "32-Timing-Budgeting-Commands"
+        },
+        {
+            "startPage": 3550,
+            "endPage": 3779,
+            "name": "33-Timing-Constraint-Commands"
+        },
+        {
+            "startPage": 3780,
+            "endPage": 3822,
+            "name": "34-Timing-Debug-Commands"
+        },
+        {
+            "startPage": 3823,
+            "endPage": 3825,
+            "name": "35-Timing-Global-Commands"
+        },
+        {
+            "startPage": 3827,
+            "endPage": 4040,
+            "name": "36-Timing-Global-Variables"
+        },
+        {
+            "startPage": 4042,
+            "endPage": 4068,
+            "name": "37-Timing-Modeling-Commands"
+        },
+        {
+            "startPage": 4069,
+            "endPage": 4266,
+            "name": "38-Timing-Optimization-Commands"
+        },
+        {
+            "startPage": 4267,
+            "endPage": 4456,
+            "name": "39-Advanced-Timing-Tcl-Scripting-Commands"
+        },
+        {
+            "startPage": 4457,
+            "endPage": 4484,
+            "name": "40-TSV-Design-Commands"
+        },
+        {
+            "startPage": 4485,
+            "endPage": 4598,
+            "name": "41-Verify-Commands"
+        },
+        {
+            "startPage": 4599,
+            "endPage": 4632,
+            "name": "42-What-If-Timing-Commands"
+        },
+        {
+            "startPage": 4634,
+            "endPage": 4764,
+            "name": "43-Wire-Edit-Commands"
+        },
+        {
+            "startPage": 4766,
+            "endPage": 4786,
+            "name": "44-Unix-Commands"
+        },
+        {
+            "startPage": 4787,
+            "endPage": 4856,
+            "name": "45-Basic-Database-Access-Tcl-Commands-and-Global-Variables"
+        },
+        {
+            "startPage": 4857,
+            "endPage": 4857,
+            "name": "46-Database-Object-Information"
+        },
+        {
+            "startPage": 4858,
+            "endPage": 4877,
+            "name": "47-Design-Metrics"
+        }
+    ]
+}

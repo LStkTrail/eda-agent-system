@@ -29,3 +29,9 @@ Thumbs.db
 # IDE 配置
 .vscode/
 .idea/
+
+# Qoder配置
+.qoder/
+
+# 临时输出
+.output/
