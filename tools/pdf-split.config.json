@@ -892,7 +892,749 @@
         {
             "startPage": 518,
             "endPage": 820,
-            "name": "07-Floorplan-Commands"
+            "name": "07-Floorplan-Commands",
+            "subCommands": [
+                {
+                    "name": "07-01-add_ndr",
+                    "startPage": 523,
+                    "endPage": 525
+                },
+                {
+                    "name": "07-02-add_shape",
+                    "startPage": 526,
+                    "endPage": 528
+                },
+                {
+                    "name": "07-03-add_text",
+                    "startPage": 529,
+                    "endPage": 530
+                },
+                {
+                    "name": "07-04-add_via",
+                    "startPage": 531,
+                    "endPage": 532
+                },
+                {
+                    "name": "07-05-add_via_definition",
+                    "startPage": 533,
+                    "endPage": 534
+                },
+                {
+                    "name": "07-06-addAoFiller",
+                    "startPage": 535,
+                    "endPage": 536
+                },
+                {
+                    "name": "07-07-addAoRow",
+                    "startPage": 537,
+                    "endPage": 538
+                },
+                {
+                    "name": "07-08-addHaloToBlock",
+                    "startPage": 539,
+                    "endPage": 540
+                },
+                {
+                    "name": "07-09-addInstToInstGroup",
+                    "startPage": 541,
+                    "endPage": 542
+                },
+                {
+                    "name": "07-10-addIoFiller",
+                    "startPage": 543,
+                    "endPage": 544
+                },
+                {
+                    "name": "07-11-addInstance",
+                    "startPage": 545,
+                    "endPage": 546
+                },
+                {
+                    "name": "07-12-addIoRowFiller",
+                    "startPage": 547,
+                    "endPage": 548
+                },
+                {
+                    "name": "07-13-addModuleToFPan",
+                    "startPage": 549,
+                    "endPage": 550
+                },
+                {
+                    "name": "07-14-addObjPlanCutBox",
+                    "startPage": 551,
+                    "endPage": 552
+                },
+                {
+                    "name": "07-15-addRoutingHalo",
+                    "startPage": 553,
+                    "endPage": 554
+                },
+                {
+                    "name": "07-16-addSizeBlockage",
+                    "startPage": 555,
+                    "endPage": 556
+                },
+                {
+                    "name": "07-17-adjustFPanChannel",
+                    "startPage": 557,
+                    "endPage": 558
+                },
+                {
+                    "name": "07-18-alignObject",
+                    "startPage": 559,
+                    "endPage": 560
+                },
+                {
+                    "name": "07-19-autoGenRelativeFPan",
+                    "startPage": 561,
+                    "endPage": 562
+                },
+                {
+                    "name": "07-20-changeFloorplan",
+                    "startPage": 563,
+                    "endPage": 564
+                },
+                {
+                    "name": "07-21-changeIoConstraints",
+                    "startPage": 565,
+                    "endPage": 566
+                },
+                {
+                    "name": "07-22-checkFPan",
+                    "startPage": 567,
+                    "endPage": 568
+                },
+                {
+                    "name": "07-23-checkFPanSpace",
+                    "startPage": 569,
+                    "endPage": 570
+                },
+                {
+                    "name": "07-24-checkMacroILOnTrack",
+                    "startPage": 571,
+                    "endPage": 572
+                },
+                {
+                    "name": "07-25-convertFenceToLef",
+                    "startPage": 573,
+                    "endPage": 574
+                },
+                {
+                    "name": "07-26-copyObject",
+                    "startPage": 575,
+                    "endPage": 576
+                },
+                {
+                    "name": "07-27-create_relative_floorplan",
+                    "startPage": 577,
+                    "endPage": 578
+                },
+                {
+                    "name": "07-28-createAbuttedFPan",
+                    "startPage": 579,
+                    "endPage": 580
+                },
+                {
+                    "name": "07-29-createDensityArea",
+                    "startPage": 581,
+                    "endPage": 582
+                },
+                {
+                    "name": "07-30-createFence",
+                    "startPage": 583,
+                    "endPage": 584
+                },
+                {
+                    "name": "07-31-createGuide",
+                    "startPage": 585,
+                    "endPage": 586
+                },
+                {
+                    "name": "07-32-createInstGroup",
+                    "startPage": 587,
+                    "endPage": 588
+                },
+                {
+                    "name": "07-33-createIoRow",
+                    "startPage": 589,
+                    "endPage": 590
+                },
+                {
+                    "name": "07-34-createLogicHierarchy",
+                    "startPage": 591,
+                    "endPage": 592
+                },
+                {
+                    "name": "07-35-createPGPin",
+                    "startPage": 593,
+                    "endPage": 594
+                },
+                {
+                    "name": "07-36-createPhysicalPin",
+                    "startPage": 595,
+                    "endPage": 596
+                },
+                {
+                    "name": "07-37-createPlaceBlockage",
+                    "startPage": 597,
+                    "endPage": 598
+                },
+                {
+                    "name": "07-38-createRegion",
+                    "startPage": 599,
+                    "endPage": 600
+                },
+                {
+                    "name": "07-39-createRouteBlk",
+                    "startPage": 601,
+                    "endPage": 602
+                },
+                {
+                    "name": "07-40-createRow",
+                    "startPage": 603,
+                    "endPage": 604
+                },
+                {
+                    "name": "07-41-createSoftGuide",
+                    "startPage": 605,
+                    "endPage": 606
+                },
+                {
+                    "name": "07-42-createStairwayBoundary",
+                    "startPage": 607,
+                    "endPage": 608
+                },
+                {
+                    "name": "07-43-cutRectilinearInst",
+                    "startPage": 609,
+                    "endPage": 610
+                },
+                {
+                    "name": "07-44-cutRow",
+                    "startPage": 611,
+                    "endPage": 612
+                },
+                {
+                    "name": "07-45-delete_relative_floorplan",
+                    "startPage": 613,
+                    "endPage": 614
+                },
+                {
+                    "name": "07-46-deleteAllDensityAreas",
+                    "startPage": 615,
+                    "endPage": 616
+                },
+                {
+                    "name": "07-47-deleteAllFPObjects",
+                    "startPage": 617,
+                    "endPage": 618
+                },
+                {
+                    "name": "07-48-deleteAllInstGroups",
+                    "startPage": 619,
+                    "endPage": 620
+                },
+                {
+                    "name": "07-49-deleteAllPowerPreroutes",
+                    "startPage": 621,
+                    "endPage": 622
+                },
+                {
+                    "name": "07-50-deleteAllSignalPreroutes",
+                    "startPage": 623,
+                    "endPage": 624
+                },
+                {
+                    "name": "07-51-deleteFPObject",
+                    "startPage": 625,
+                    "endPage": 626
+                },
+                {
+                    "name": "07-52-deleteHaloFromBlock",
+                    "startPage": 627,
+                    "endPage": 628
+                },
+                {
+                    "name": "07-53-deleteInstFromInstGroup",
+                    "startPage": 629,
+                    "endPage": 630
+                },
+                {
+                    "name": "07-54-deleteInstGroup",
+                    "startPage": 631,
+                    "endPage": 632
+                },
+                {
+                    "name": "07-55-deleteIoFiller",
+                    "startPage": 633,
+                    "endPage": 634
+                },
+                {
+                    "name": "07-56-deleteIoInstance",
+                    "startPage": 635,
+                    "endPage": 636
+                },
+                {
+                    "name": "07-57-deleteIoRowFiller",
+                    "startPage": 637,
+                    "endPage": 638
+                },
+                {
+                    "name": "07-58-deleteNetWeight",
+                    "startPage": 639,
+                    "endPage": 640
+                },
+                {
+                    "name": "07-59-deletePGPin",
+                    "startPage": 641,
+                    "endPage": 642
+                },
+                {
+                    "name": "07-60-deletePlaceBlockage",
+                    "startPage": 643,
+                    "endPage": 644
+                },
+                {
+                    "name": "07-61-deleteRouteBlk",
+                    "startPage": 645,
+                    "endPage": 646
+                },
+                {
+                    "name": "07-62-deleteRoutingHalo",
+                    "startPage": 647,
+                    "endPage": 648
+                },
+                {
+                    "name": "07-63-deleteRow",
+                    "startPage": 649,
+                    "endPage": 650
+                },
+                {
+                    "name": "07-64-deleteSelectedFromFPan",
+                    "startPage": 651,
+                    "endPage": 652
+                },
+                {
+                    "name": "07-65-deleteSizeBlockage",
+                    "startPage": 653,
+                    "endPage": 654
+                },
+                {
+                    "name": "07-66-deselectAll",
+                    "startPage": 655,
+                    "endPage": 656
+                },
+                {
+                    "name": "07-67-deselectGroup",
+                    "startPage": 657,
+                    "endPage": 658
+                },
+                {
+                    "name": "07-68-deselectInst",
+                    "startPage": 659,
+                    "endPage": 660
+                },
+                {
+                    "name": "07-69-deselectInstByCellName",
+                    "startPage": 661,
+                    "endPage": 662
+                },
+                {
+                    "name": "07-70-deselectInstOnNet",
+                    "startPage": 663,
+                    "endPage": 664
+                },
+                {
+                    "name": "07-71-deselectIOPin",
+                    "startPage": 665,
+                    "endPage": 666
+                },
+                {
+                    "name": "07-72-deselectNet",
+                    "startPage": 667,
+                    "endPage": 668
+                },
+                {
+                    "name": "07-73-display_obj_connectivity",
+                    "startPage": 669,
+                    "endPage": 670
+                },
+                {
+                    "name": "07-74-exportNdr",
+                    "startPage": 671,
+                    "endPage": 672
+                },
+                {
+                    "name": "07-75-finishFloorplan",
+                    "startPage": 673,
+                    "endPage": 674
+                },
+                {
+                    "name": "07-76-fix_boundary_overlaps",
+                    "startPage": 675,
+                    "endPage": 676
+                },
+                {
+                    "name": "07-77-fixAllos",
+                    "startPage": 677,
+                    "endPage": 678
+                },
+                {
+                    "name": "07-78-flipModule",
+                    "startPage": 679,
+                    "endPage": 680
+                },
+                {
+                    "name": "07-79-flipOrRotateObject",
+                    "startPage": 681,
+                    "endPage": 682
+                },
+                {
+                    "name": "07-80-floorPlan",
+                    "startPage": 683,
+                    "endPage": 684
+                },
+                {
+                    "name": "07-81-generate_fence",
+                    "startPage": 685,
+                    "endPage": 686
+                },
+                {
+                    "name": "07-82-get_trace_obj_connectivity_mode",
+                    "startPage": 687,
+                    "endPage": 688
+                },
+                {
+                    "name": "07-83-getDrawView",
+                    "startPage": 689,
+                    "endPage": 690
+                },
+                {
+                    "name": "07-84-getFinishFPanMode",
+                    "startPage": 691,
+                    "endPage": 692
+                },
+                {
+                    "name": "07-85-getFPanMode",
+                    "startPage": 693,
+                    "endPage": 694
+                },
+                {
+                    "name": "07-86-getIoFlowFlag",
+                    "startPage": 695,
+                    "endPage": 696
+                },
+                {
+                    "name": "07-87-getNetWeight",
+                    "startPage": 697,
+                    "endPage": 698
+                },
+                {
+                    "name": "07-88-getObjFPanBoxList",
+                    "startPage": 699,
+                    "endPage": 700
+                },
+                {
+                    "name": "07-89-getObjFPanPolygon",
+                    "startPage": 701,
+                    "endPage": 702
+                },
+                {
+                    "name": "07-90-getPanDesignMode",
+                    "startPage": 703,
+                    "endPage": 704
+                },
+                {
+                    "name": "07-91-getRailPrototypeMode",
+                    "startPage": 705,
+                    "endPage": 706
+                },
+                {
+                    "name": "07-92-getResizeFPanMode",
+                    "startPage": 707,
+                    "endPage": 708
+                },
+                {
+                    "name": "07-93-initCoreRow",
+                    "startPage": 709,
+                    "endPage": 710
+                },
+                {
+                    "name": "07-94-legalizeFPan",
+                    "startPage": 711,
+                    "endPage": 712
+                },
+                {
+                    "name": "07-95-loadFPan",
+                    "startPage": 713,
+                    "endPage": 714
+                },
+                {
+                    "name": "07-96-loadIoFile",
+                    "startPage": 715,
+                    "endPage": 716
+                },
+                {
+                    "name": "07-97-modify_ndr",
+                    "startPage": 717,
+                    "endPage": 718
+                },
+                {
+                    "name": "07-98-moveGroupPins",
+                    "startPage": 719,
+                    "endPage": 720
+                },
+                {
+                    "name": "07-99-moveMacroInsideModule",
+                    "startPage": 721,
+                    "endPage": 722
+                },
+                {
+                    "name": "07-100-moveSelObj",
+                    "startPage": 723,
+                    "endPage": 724
+                },
+                {
+                    "name": "07-101-pasteObject",
+                    "startPage": 725,
+                    "endPage": 726
+                },
+                {
+                    "name": "07-102-placeAIO",
+                    "startPage": 727,
+                    "endPage": 728
+                },
+                {
+                    "name": "07-103-placePadIO",
+                    "startPage": 729,
+                    "endPage": 730
+                },
+                {
+                    "name": "07-104-placePIO",
+                    "startPage": 731,
+                    "endPage": 732
+                },
+                {
+                    "name": "07-105-planDesign",
+                    "startPage": 733,
+                    "endPage": 734
+                },
+                {
+                    "name": "07-106-queryFPanObject",
+                    "startPage": 735,
+                    "endPage": 736
+                },
+                {
+                    "name": "07-107-refineMacro",
+                    "startPage": 737,
+                    "endPage": 738
+                },
+                {
+                    "name": "07-108-report_narrow_channel",
+                    "startPage": 739,
+                    "endPage": 740
+                },
+                {
+                    "name": "07-109-report_obj_connectivity",
+                    "startPage": 741,
+                    "endPage": 742
+                },
+                {
+                    "name": "07-110-reportNetGroup",
+                    "startPage": 743,
+                    "endPage": 744
+                },
+                {
+                    "name": "07-111-reportSeedConnection",
+                    "startPage": 745,
+                    "endPage": 746
+                },
+                {
+                    "name": "07-112-reportSelect",
+                    "startPage": 747,
+                    "endPage": 748
+                },
+                {
+                    "name": "07-113-reportUnSnapBlocks",
+                    "startPage": 749,
+                    "endPage": 750
+                },
+                {
+                    "name": "07-114-resizeFloorplan",
+                    "startPage": 751,
+                    "endPage": 752
+                },
+                {
+                    "name": "07-115-runRcNetlistRestruct",
+                    "startPage": 753,
+                    "endPage": 754
+                },
+                {
+                    "name": "07-116-save_global",
+                    "startPage": 755,
+                    "endPage": 756
+                },
+                {
+                    "name": "07-117-saveFPan",
+                    "startPage": 757,
+                    "endPage": 758
+                },
+                {
+                    "name": "07-118-saveIoFile",
+                    "startPage": 759,
+                    "endPage": 760
+                },
+                {
+                    "name": "07-119-select_row",
+                    "startPage": 761,
+                    "endPage": 762
+                },
+                {
+                    "name": "07-120-selectGroup",
+                    "startPage": 763,
+                    "endPage": 764
+                },
+                {
+                    "name": "07-121-selectInst",
+                    "startPage": 765,
+                    "endPage": 766
+                },
+                {
+                    "name": "07-122-selectInstByCellName",
+                    "startPage": 767,
+                    "endPage": 768
+                },
+                {
+                    "name": "07-123-selectInstOnNet",
+                    "startPage": 769,
+                    "endPage": 770
+                },
+                {
+                    "name": "07-124-selectIOPin",
+                    "startPage": 771,
+                    "endPage": 772
+                },
+                {
+                    "name": "07-125-selectNet",
+                    "startPage": 773,
+                    "endPage": 774
+                },
+                {
+                    "name": "07-126-selectPGPin",
+                    "startPage": 775,
+                    "endPage": 776
+                },
+                {
+                    "name": "07-127-selectRouteBlk",
+                    "startPage": 777,
+                    "endPage": 778
+                },
+                {
+                    "name": "07-128-set_trace_obj_connectivity_mode",
+                    "startPage": 779,
+                    "endPage": 780
+                },
+                {
+                    "name": "07-129-setBottomIoPadOrient",
+                    "startPage": 781,
+                    "endPage": 782
+                },
+                {
+                    "name": "07-130-setDrawView",
+                    "startPage": 783,
+                    "endPage": 784
+                },
+                {
+                    "name": "07-131-setFinishFPanMode",
+                    "startPage": 785,
+                    "endPage": 786
+                },
+                {
+                    "name": "07-132-setFixedBlockSize",
+                    "startPage": 787,
+                    "endPage": 788
+                },
+                {
+                    "name": "07-133-setFlipping",
+                    "startPage": 789,
+                    "endPage": 790
+                },
+                {
+                    "name": "07-134-setFPanMode",
+                    "startPage": 791,
+                    "endPage": 792
+                },
+                {
+                    "name": "07-135-setFPanRowSpacingAndType",
+                    "startPage": 793,
+                    "endPage": 794
+                },
+                {
+                    "name": "07-136-setInstancePlacementStatus",
+                    "startPage": 795,
+                    "endPage": 796
+                },
+                {
+                    "name": "07-137-setInstGroupPhyHier",
+                    "startPage": 797,
+                    "endPage": 798
+                },
+                {
+                    "name": "07-138-setIoFlowFlag",
+                    "startPage": 799,
+                    "endPage": 800
+                },
+                {
+                    "name": "07-139-setIoRowMargin",
+                    "startPage": 801,
+                    "endPage": 802
+                },
+                {
+                    "name": "07-140-setObjFPanBox",
+                    "startPage": 803,
+                    "endPage": 804
+                },
+                {
+                    "name": "07-141-setObjFPanBoxList",
+                    "startPage": 805,
+                    "endPage": 806
+                },
+                {
+                    "name": "07-142-setObjFPanPolygon",
+                    "startPage": 807,
+                    "endPage": 808
+                },
+                {
+                    "name": "07-143-setPanDesignMode",
+                    "startPage": 809,
+                    "endPage": 810
+                },
+                {
+                    "name": "07-144-setRailPrototypeMode",
+                    "startPage": 811,
+                    "endPage": 812
+                },
+                {
+                    "name": "07-145-setResizeFPanMode",
+                    "startPage": 813,
+                    "endPage": 814
+                },
+                {
+                    "name": "07-146-setResizeLine",
+                    "startPage": 815,
+                    "endPage": 816
+                },
+                {
+                    "name": "07-147-setRouteBlkDefaultLayer",
+                    "startPage": 817,
+                    "endPage": 818
+                },
+                {
+                    "name": "07-148-setSelectedDensityArea",
+                    "startPage": 819,
+                    "endPage": 820
+                }
+            ]
         },
         {
             "startPage": 821,

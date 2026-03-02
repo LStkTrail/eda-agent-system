@@ -97,29 +97,38 @@ function imageToBase64DataUrl(imagePath: string): string {
 }
 
 /**
- * 调用 Chat Completions API
+ * 调用 Chat Completions API（带超时）
  */
 async function chatCompletion(
   request: ChatCompletionRequest,
   config: ProviderConfig,
+  timeoutMs: number = 300000, // 默认 5 分钟超时
 ): Promise<ChatCompletionResponse> {
   const url = `${config.baseUrl}/chat/completions`;
 
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${config.apiKey}`,
-    },
-    body: JSON.stringify(request),
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`API 请求失败 (${response.status}): ${errorText}`);
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${config.apiKey}`,
+      },
+      body: JSON.stringify(request),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API 请求失败 (${response.status}): ${errorText}`);
+    }
+
+    return response.json();
+  } finally {
+    clearTimeout(timeoutId);
   }
-
-  return response.json();
 }
 
 /**
@@ -172,48 +181,42 @@ async function extractSubCommandsFromImages(
   sectionStartPage: number,
   config: ProviderConfig,
 ): Promise<SubCommand[]> {
-  // 对于大型 PDF，我们只处理前几页（目录页）和采样一些内容页
-  // 目录页通常包含所有命令的链接
-  const maxImages = 30; // 限制最大图片数量避免超出 API 限制
+  // 对于大型 PDF，我们只处理前几页（目录页）
+  // 目录页通常包含所有命令的链接，足以提取命令列表
+  const maxImages = 10; // 限制最大图片数量避免超时
   let selectedImages = imageFiles;
   
   if (imageFiles.length > maxImages) {
-    // 选择前几页（通常是目录）和一些分散的页面
-    const tocPages = imageFiles.slice(0, Math.min(5, imageFiles.length));
-    const step = Math.floor((imageFiles.length - 5) / (maxImages - 5));
-    const sampledPages: string[] = [];
-    for (let i = 5; i < imageFiles.length && sampledPages.length < maxImages - 5; i += step) {
-      sampledPages.push(imageFiles[i]);
-    }
-    selectedImages = [...tocPages, ...sampledPages];
+    // 只选择前几页（目录页），目录通常在前 3-5 页
+    selectedImages = imageFiles.slice(0, maxImages);
   }
 
   // 构建包含图片的消息内容
   const content: MessageContent[] = [
     {
       type: 'text',
-      text: `你是一个 EDA 工具文档分析专家。请仔细阅读以下 ${selectedImages.length} 张图片，它们是 "${sectionName}" 章节的 PDF 文档截图。
+      text: `你是一个 EDA 工具文档分析专家。请仔细阅读以下 ${selectedImages.length} 张图片，它们是 "${sectionName}" 章节的 PDF 文档截图（主要是目录页）。
 
-你的任务是识别并提取所有子命令（sub-command）的信息。每个子命令通常有自己的标题页面。
+你的任务是识别并提取所有子命令（sub-command）的信息。
 
 **重要信息：**
 - 章节序号: ${String(sectionIndex).padStart(2, '0')}
 - 章节名称: ${sectionName}
 - 章节在原始 PDF 中的起始页码: ${sectionStartPage}
-- 提供的图片是该章节的第 1 到第 ${imageFiles.length} 页
+- 章节总页数: ${imageFiles.length} 页
 
 **输出要求：**
 请直接输出 JSON 数组格式，列出所有识别到的子命令。每个子命令包含：
 - name: 命令名称（格式为 "序号-命令名"，例如 "${String(sectionIndex).padStart(2, '0')}-01-commandName"）
-- startPage: 命令在原始 PDF 中的起始页码（章节起始页码 + 章节内页码 - 1）
+- startPage: 命令在原始 PDF 中的起始页码
 - endPage: 命令在原始 PDF 中的结束页码
 
 **注意事项：**
 1. 第一张图片通常是目录页，列出了所有命令名称
-2. 每个命令的详细说明通常从新的一页开始，标题是命令名称
-3. 命令名称通常是英文的函数/命令格式，如 assign_clock_tree_source_groups, ccopt_design 等
-4. 页码计算：如果某命令在章节的第 N 页开始，则原始 PDF 页码 = ${sectionStartPage} + N - 1
-5. 如果无法确定准确的页码范围，可以根据命令数量和总页数进行估算
+2. 命令名称通常是英文的函数/命令格式，如 assign_clock_tree_source_groups, ccopt_design 等
+3. 目录页中的页码是章节内的相对页码，需要转换为绝对页码：绝对页码 = ${sectionStartPage} + 相对页码 - 1
+4. 如果目录没有显示具体页码，请根据命令数量和总页数 ${imageFiles.length} 进行均匀估算
+5. 最后一个命令的 endPage 应该是章节的最后一页
 
 请只输出 JSON 数组，不要包含其他内容：
 [
@@ -281,7 +284,7 @@ async function processSection(
 
   // 转换 PDF 为图片
   const sectionTempDir = path.join(tempDir, range.name);
-  const imageFiles = pdfToImages(pdfPath, sectionTempDir, 100); // 降低 DPI 减少文件大小
+  const imageFiles = pdfToImages(pdfPath, sectionTempDir, 72); // 使用 72 DPI 减少文件大小
   console.log(`  生成 ${imageFiles.length} 张图片`);
 
   if (imageFiles.length === 0) {
@@ -290,7 +293,8 @@ async function processSection(
   }
 
   // 使用 LLM 分析图片
-  console.log(`  调用 LLM 分析...`);
+  const actualImageCount = Math.min(imageFiles.length, 10);
+  console.log(`  调用 LLM 分析 (使用前 ${actualImageCount} 张图片)...`);
   const subCommands = await extractSubCommandsFromImages(
     imageFiles,
     range.name,
