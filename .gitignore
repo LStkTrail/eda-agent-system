@@ -1,9 +1,10 @@
 # 依赖
 node_modules/
 
-# Next.js 构建输出
-.next/
-out/
+# Nuxt 构建输出
+.nuxt/
+.output/
+dist/
 
 # 环境配置（包含密钥，不应提交）
 .env
@@ -23,16 +24,18 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-# TypeScript 缓存（如果启用）
+# TypeScript 缓存
 *.tsbuildinfo
 
 # IDE 配置
 .vscode/
 .idea/
 
-# Qoder配置
+# Qoder 配置
 .qoder/
 
-# 临时输出
-.output/
+# Nitro 输出
+.nitro/
+
+# 临时文件
 _tmp/
